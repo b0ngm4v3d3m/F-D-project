@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_09_130227) do
+ActiveRecord::Schema.define(version: 2021_12_12_083304) do
 
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -79,6 +79,9 @@ ActiveRecord::Schema.define(version: 2021_12_09_130227) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
+    t.string "Surname"
+    t.string "Country"
+    t.string "State_Region"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

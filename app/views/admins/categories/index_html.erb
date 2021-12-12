@@ -1,0 +1,7 @@
+<% provide(:title, 'All category') %>
+<h1>All categories </h1>
+<%= will_paginate  %>
+  <ul class="categories">
+    <%= render @categories %>
+  </ul>
+<%= will_paginate %>

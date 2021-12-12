@@ -1,25 +1,54 @@
 <% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+        </div>
+        <div class="col-md-5 border-right">
+          <%= form_for(@user) do |f| %>
+          <%= render 'shared/error_messages' %>
+            <div class="p-2 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h1 class="text-center">Profile Settings</h1>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                      <%= f.label :name %>
+                      <%= f.text_field :name, class: 'form-control' %>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.label :Surname %>
+                      <%= f.text_field :Surname, class: 'form-control' %>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                      <%= f.label :phone_number %>
+                      <%= f.number_field :phone_number, class: 'form-control' %></div>
+                    <div class="col-md-12">
+                      <%= f.label :email %>
+                      <%= f.email_field :email, class: 'form-control' %></div>
+                    <div class="col-md-12">
+                      <%= f.label :password %>
+                      <%= f.password_field :password, class: 'form-control' %></div>
+                    <div class="col-md-12">
+                      <%= f.label :password_confirmation, "Confirmation" %>
+                      <%= f.password_field :password_confirmation, class: 'form-control' %></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                      <%= f.label :Country %>
+                      <%= f.text_field :Country, class: 'form-control' %>
+                    </div>
+                    <div class="col-md-6">
+                      <%= f.label :State_Region %>
+                      <%= f.text_field :State_Region, class: 'form-control' %>
+                    </div>
+                </div>
+                <div class="mt-5 text-center"><button><%= f.submit "Save changes", class: "btn btn-primary profile-button" %></button></div>
+            </div>
+      <% end %>
+    </div>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :phone_number %>
-      <%= f.number_field :phone_number, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+</div>
+</div>
 </div>
