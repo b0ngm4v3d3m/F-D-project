@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def find_cart
-    @cart = current_cart
+    @cart = current_cart if logged_in?
   end
 
   helper_method :current_cart

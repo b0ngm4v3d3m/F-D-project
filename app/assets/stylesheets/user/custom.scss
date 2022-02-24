@@ -1458,7 +1458,7 @@ p {
 .btn:hover, .btn:focus, .btn.focus {
     box-shadow: none !important;
     text-decoration: none;
-=======
+}
 .icon_cart{
   width: 100px;
   position: relative;
@@ -1473,6 +1473,7 @@ p {
   padding-bottom: 20px;
 }
 .table-item{
+  width: 500px;
   display: flex;
   align-items: center;
 }
@@ -1485,7 +1486,7 @@ p {
 .D-U-item{
   display: flex;
   float-right: 10px ;
-  width: 12.70417%;
+  width: 70%;
   text-transform: capitalize;
   border-radius: 50px;
 }
@@ -1548,4 +1549,8 @@ p {
 .form-check-input {
   height: 1em !important;
 
+}
+.delete_button{
+  margin-top: 10px;
+  width: 70;
 }

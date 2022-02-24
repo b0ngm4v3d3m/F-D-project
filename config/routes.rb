@@ -23,15 +23,12 @@ Rails.application.routes.draw do
   resources :order_items, only: [:create, :update, :destroy]
   root to: "static_pages#home"
   resources :feedbacks, only: [:create]
-  root to:'products#show'
 
   resources :orders do
     member do
       put :update_status
     end
   end
-
-
 
   namespace :admin do
     root "dash_board#index"

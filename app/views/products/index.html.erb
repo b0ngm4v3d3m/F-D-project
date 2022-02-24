@@ -65,12 +65,14 @@
               <%= link_to product.name, product %>
             </h3>
             <div class="field-price">
-              <span>1</span>
-              <span>Tỷ</span>
+              <span><%= product.price %></span>
+              <span>VND</span>
             </div>
-            <div class="field-btn">
-              <button type="button" title="Add to cart">Add to cart</button>
-            </div>
+            <% if logged_in? %>
+              <div class="field-btn">
+                <button type="button" title="Add to cart">Add to cart</button>
+              </div>
+            <% end %>
           </div>
         </li>
       <% end -%>

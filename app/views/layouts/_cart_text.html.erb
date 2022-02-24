@@ -1,3 +1,5 @@
-<i >
-  <%= link_to "#{current_cart.order_items.size} , ( #{number_to_currency current_cart.subtotal} )", cart_path(@cart), style:"font-size: 15px", class:"icon_cart cart_icon fas fa-shopping-cart btn btn-link" %>
-</i>
+<% if logged_in? %>
+  <i >
+    <%= link_to "#{current_cart.order_items.size} , ( #{number_to_currency current_cart.subtotal} )", cart_path(@cart), style:"font-size: 15px", class:"icon_cart cart_icon fas fa-shopping-cart btn btn-link" %>
+  </i>
+<% end %>

@@ -1,54 +1,51 @@
 <% provide(:title, "Edit user") %>
 <div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
-        <div class="col-md-3 border-right">
-        </div>
-        <div class="col-md-5 border-right">
-          <%= form_for(@user) do |f| %>
-          <%= render 'shared/error_messages' %>
-            <div class="p-2 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h1 class="text-center">Profile Settings</h1>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6">
-                      <%= f.label :name %>
-                      <%= f.text_field :name, class: 'form-control' %>
-                    </div>
-                    <div class="col-md-6">
-                      <%= f.label :surname %>
-                      <%= f.text_field :surname, class: 'form-control' %>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12">
-                      <%= f.label :phone_number %>
-                      <%= f.number_field :phone_number, class: 'form-control' %></div>
-                    <div class="col-md-12">
-                      <%= f.label :email %>
-                      <%= f.email_field :email, class: 'form-control' %></div>
-                    <div class="col-md-12">
-                      <%= f.label :password %>
-                      <%= f.password_field :password, class: 'form-control' %></div>
-                    <div class="col-md-12">
-                      <%= f.label :password_confirmation, "Confirmation" %>
-                      <%= f.password_field :password_confirmation, class: 'form-control' %></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                      <%= f.label :country %>
-                      <%= f.text_field :country, class: 'form-control' %>
-                    </div>
-                    <div class="col-md-6">
-                      <%= f.label :state_region %>
-                      <%= f.text_field :state_region, class: 'form-control' %>
-                    </div>
-                </div>
-                <div class="mt-5 text-center"><button><%= f.submit "Save changes", class: "btn btn-primary profile-button" %></button></div>
+  <div class="row">
+    <div class="col-md-3 border-right"></div>
+    <div class="col-md-5 border-right">
+      <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+        <div class="p-2 py-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+              <h1 class="text-center">Profile Settings</h1>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <%= f.label :name %>
+              <%= f.text_field :name, class: 'form-control' %>
             </div>
-      <% end %>
+            <div class="col-md-6">
+              <%= f.label :surname %>
+              <%= f.text_field :surname, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12">
+              <%= f.label :phone_number %>
+              <%= f.number_field :phone_number, class: 'form-control' %></div>
+            <div class="col-md-12">
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'form-control' %></div>
+            <div class="col-md-12">
+              <%= f.label :password %>
+              <%= f.password_field :password, class: 'form-control' %></div>
+            <div class="col-md-12">
+              <%= f.label :password_confirmation, "Confirmation" %>
+              <%= f.password_field :password_confirmation, class: 'form-control' %></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <%= f.label :country %>
+              <%= f.text_field :country, class: 'form-control' %>
+            </div>
+            <div class="col-md-6">
+              <%= f.label :state_region %>
+              <%= f.text_field :state_region, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="mt-5 text-center"><button><%= f.submit "Save changes", class: "btn btn-primary profile-button" %></button></div>
+        </div>
+    <% end %>
     </div>
-
-</div>
-</div>
+  </div>
 </div>

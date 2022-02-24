@@ -8,6 +8,5 @@ class ProductsController < ApplicationController
     redirect_to products_path unless @product
     @cart = current_cart
     @order_item = current_cart.order_items.new
-    @comment = Comment.new
   end
 end
